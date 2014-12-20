@@ -18,7 +18,7 @@
         <div class="'row">
             <div class="col-md-12">
 
-                <h1> Your points: {{ points }} </h1>
+                <h1 class="bg-danger"> Your points: {{ points }}! <small>Your letter was successfully send to Santa! </small></h1>
 
                 {% if points < 15 %}
                     <h3>
@@ -38,7 +38,8 @@
                     </h3>
                 {% endif %}
                 <br>
-                <h3>Random congratulation:</h3>
+                <br>
+                <h2 class="bg-info">This is random congratulation from another child for you:</h2>
                 <h3>{{ congratulation }}</h3>
 
 
