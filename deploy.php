@@ -11,6 +11,3 @@ server('students-hackathon', $parameters['parameters']['prod_server_ip'])
 
 set('repository', $parameters['parameters']['https_github_repository_url']);
 
-task('deploy:end', function () {
-    run('chmod 777 -R current/app/cache current/app/logs');
-});

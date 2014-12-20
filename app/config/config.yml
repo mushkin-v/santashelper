@@ -80,7 +80,7 @@ swiftmailer:
      encryption: ssl
      auth_mode:  login
      host:       smtp.gmail.com
-     username:   zmejka
+     username:   myroslavazel
      password:   ladymacbeth1990
      disable_delivery: true
 
