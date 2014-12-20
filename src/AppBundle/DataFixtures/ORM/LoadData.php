@@ -1,12 +1,10 @@
 <?php
 
-namespace vit\Doctrine1Bundle\DataFixtures\ORM;
+namespace AppBundle\DataFixtures\ORM;
 
+use AppBundle\Entity\Child;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use vit\Doctrine1Bundle\Entity\MenuDir;
-use vit\Doctrine1Bundle\Entity\MenuItem;
-use vit\Doctrine1Bundle\Entity\MenuOrder;
 
 class LoadData implements FixtureInterface
 {
@@ -15,120 +13,44 @@ class LoadData implements FixtureInterface
      */
     public function load(ObjectManager $manager)
     {
-
-        $MenuDir = new MenuDir();
-        $MenuDir
-            ->setName('Первые блюда')
-            ->setDescription('Описание первых блюд')
+        $child = new Child();
+        $child
+            ->setName('Donald')
+            ->setSurname('Duck')
+            ->setAge(4)
+            ->setParent('Walt Disney')
+            ->setEmail('myroslavazel@gmail.com')
+            ->setCongratulation('We wish you a happy New Year!!!')
+            ->setLetter('Dear, Santa! I want a dog!')
+            ->setTestresult(10)
         ;
-        $manager->persist($MenuDir);
+        $manager->persist($child);
 
-        $MenuItem = new MenuItem();
-        $MenuItem
-            ->setName('Суп с фрикадельками')
-            ->setPrice(100)
-            ->setDescription('Описание супа с фрикадельками')
-            ->setWeight(100)
-            ->setMenuDir($MenuDir)
-        ;$MenuOrder = new MenuOrder();
-        $MenuOrder
-            ->setNumber('Тестовый заказ №1')
-            ->setDescription('Тестовый заказ №1');
-        $MenuOrder->addOrderItem($MenuItem);
-        $MenuItem->addOrder($MenuOrder);
-        $manager->persist($MenuOrder);
-        $manager->persist($MenuItem);
-
-        $MenuItem = new MenuItem();
-        $MenuItem
-            ->setName('Борщ')
-            ->setPrice(200)
-            ->setDescription('Борщ украинский')
-            ->setWeight(200)
-            ->setMenuDir($MenuDir)
+        $child = new Child();
+        $child
+            ->setName('Myroslava')
+            ->setSurname('Zelenska')
+            ->setAge(7)
+            ->setParent('Mother')
+            ->setEmail('myroslavazel@google.net')
+            ->setCongratulation('We wish you Marry Christmas!!!')
+            ->setLetter('Dear, Santa! I want a big barby!')
+            ->setTestresult(27)
         ;
-        $manager->persist($MenuItem);
+        $manager->persist($child);
 
-        $MenuDir = new MenuDir();
-        $MenuDir
-            ->setName('Вторые блюда')
-            ->setDescription('Описание вторых блюд')
+        $child = new Child();
+        $child
+            ->setName('Vitalii')
+            ->setSurname('Mushkin')
+            ->setAge(13)
+            ->setParent('Father')
+            ->setEmail('vitbox5@yandex.ru')
+            ->setCongratulation('We wish you a happy New Year and Marry Christmas!!!')
+            ->setLetter('Dear, Santa! I want a BMV X6!')
+            ->setTestresult(23)
         ;
-        $manager->persist($MenuDir);
-
-        $MenuItem = new MenuItem();
-        $MenuItem
-            ->setName('Картошка')
-            ->setPrice(50)
-            ->setDescription('Картошка по селянски')
-            ->setWeight(150)
-            ->setMenuDir($MenuDir)
-        ;
-        $manager->persist($MenuItem);
-
-        $MenuItem = new MenuItem();
-        $MenuItem
-            ->setName('Куринные отбивные')
-            ->setPrice(300)
-            ->setDescription('Куринные отбивные из лучших куриц')
-            ->setWeight(300)
-            ->setMenuDir($MenuDir)
-        ;
-        $manager->persist($MenuItem);
-
-        $MenuDir = new MenuDir();
-        $MenuDir
-            ->setName('Третьи блюда')
-            ->setDescription('Описание третьих блюд')
-        ;
-        $manager->persist($MenuDir);
-
-        $MenuItem = new MenuItem();
-        $MenuItem
-            ->setName('Шашлык')
-            ->setPrice(500)
-            ->setDescription('Вкусный шашлык')
-            ->setWeight(500)
-            ->setMenuDir($MenuDir)
-        ;
-        $manager->persist($MenuItem);
-
-        $MenuItem = new MenuItem();
-        $MenuItem
-            ->setName('Компот')
-            ->setPrice(30)
-            ->setDescription('Самый вкусный компот')
-            ->setWeight(10)
-            ->setMenuDir($MenuDir)
-        ;
-        $manager->persist($MenuItem);
-
-        $MenuDir = new MenuDir();
-        $MenuDir
-            ->setName('Десерт')
-            ->setDescription('Описание десерта')
-        ;
-        $manager->persist($MenuDir);
-
-        $MenuItem = new MenuItem();
-        $MenuItem
-            ->setName('Мороженное')
-            ->setPrice(110)
-            ->setDescription('Десерт мороженное')
-            ->setWeight(110)
-            ->setMenuDir($MenuDir)
-        ;
-        $manager->persist($MenuItem);
-
-        $MenuItem = new MenuItem();
-        $MenuItem
-            ->setName('Бананы')
-            ->setPrice(130)
-            ->setDescription('Бананы из Африки')
-            ->setWeight(130)
-            ->setMenuDir($MenuDir)
-        ;
-        $manager->persist($MenuItem);
+        $manager->persist($child);
 
         $manager->flush();
     }

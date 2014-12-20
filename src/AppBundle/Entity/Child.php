@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Child
@@ -40,12 +41,19 @@ class Child
     /**
      * @var string
      *
-     * @ORM\Column(name="date", type="datetime")
+     * @ORM\Column(name="age", type="integer")
+     * @Assert\Range(
+     *      min = 3,
+     *      max = 14,
+     *      minMessage = "Your too young. You are {{ limit }} years old. Sorry!",
+     *      maxMessage = "Your too old. You are {{ limit }} years old. Sorry!"
+     * )
      */
-    private $date;
+    private $age;
 
     /**
      * @var string
+     *
      *
      * @ORM\Column(name="parent", type="string", length=255)
      */
@@ -148,26 +156,26 @@ class Child
     }
 
     /**
-     * Set date
+     * Set age
      *
-     * @param \DateTime $date
+     * @param integer $age
      * @return Child
      */
-    public function setDate($date)
+    public function setAge($age)
     {
-        $this->date = $date;
+        $this->age = $age;
 
         return $this;
     }
 
     /**
-     * Get date
+     * Get age
      *
-     * @return \DateTime 
+     * @return integer 
      */
-    public function getDate()
+    public function getAge()
     {
-        return $this->date;
+        return $this->age;
     }
 
     /**

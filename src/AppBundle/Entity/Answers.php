@@ -178,4 +178,27 @@ class Answers
     {
         return $this->questions;
     }
+
+    /**
+     * Set question
+     *
+     * @param \AppBundle\Entity\Questions $question
+     * @return Answers
+     */
+    public function setQuestion(\AppBundle\Entity\Questions $question = null)
+    {
+        $this->question = $question;
+
+        return $this;
+    }
+
+    /**
+     * Get question
+     *
+     * @return \AppBundle\Entity\Questions 
+     */
+    public function getQuestion()
+    {
+        return $this->question;
+    }
 }
