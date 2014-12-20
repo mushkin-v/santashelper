@@ -22,9 +22,9 @@ class DefaultController extends Controller
 
         $form->handleRequest($request);
         if ($form->isValid()) {
-            $child = $form->getData();
-            $em->persist($child->getUser());
-            $em->flush();
+//            $child = $form->getData();
+//            $em->persist($child->getUser());
+//            $em->flush();
 
             return $this->redirect('Default/tests.html.twig');
         }
