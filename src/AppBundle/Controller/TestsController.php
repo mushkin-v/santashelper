@@ -9,10 +9,10 @@ use AppBundle\Form\Type\ChildType;
 use AppBundle\Entity\Child;
 
 
-class DefaultController extends Controller
+class TestsController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/test", name="test")
      */
     public function indexAction(Request $request)
     {
@@ -30,6 +30,6 @@ class DefaultController extends Controller
         }
 
 
-        return $this->render('Default/index.html.twig', array('form' => $form->createView()));
+        return $this->render('Default/test.html.twig', array('form' => $form->createView()));
     }
 }
