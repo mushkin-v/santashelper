@@ -28,7 +28,7 @@ class Answers
      *
      * @ORM\Column(name="Answer", type="string", length=255)
      */
-    private $Answer;
+    private $answer;
 
     /**
      * @var integer
@@ -52,7 +52,7 @@ class Answers
      * @ORM\ManyToOne(targetEntity="Questions", inversedBy="answers")
      *
      */
-    private $questions;
+    private $question;
 
     /**
      * Get id

@@ -43,7 +43,7 @@ class Questions
     private $created;
 
     /**
-     * @ORM\OneToMany(targetEntity="Answers", mappedBy="questions")
+     * @ORM\OneToMany(targetEntity="Answers", mappedBy="question")
      */
     private $answers;
 
