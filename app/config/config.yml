@@ -82,4 +82,9 @@ swiftmailer:
      host:       smtp.gmail.com
      username:   zmejka
      password:   ladymacbeth1990
+<<<<<<< HEAD
      disable_delivery: true
+=======
+     disable_delivery: false
+
+>>>>>>> fd54639ae2fa2e25255e345bbd0407db035576b9
