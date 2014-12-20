@@ -26,9 +26,16 @@ class DefaultController extends Controller
             $em->persist($child);
             $em->flush();
 
+            //sending email to parents
+            $this->get('vitmail')->Send(
+                'This letter to'.$child->getParent().'from santa about your '.$child->getName(),
+                'santa@claus.com',
+                $child->getEmail(),
+                $child->getLetter()
+            );
+
             return $this->redirect($this->generateUrl('test',array('slug'=>$child->getId())), 301);
         }
-
 
         return $this->render('Default/index.html.twig', array('form' => $form->createView()));
     }

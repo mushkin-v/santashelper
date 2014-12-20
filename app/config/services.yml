@@ -1,9 +1,13 @@
-# Learn more about services, parameters and containers at
-# http://symfony.com/doc/current/book/service_container.html
+
 parameters:
-#    parameter_name: value
+    class_vitrequest: AppBundle\Services\VitRequest
+    class_vitmail: AppBundle\Services\VitMail
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    vitrequest:
+        class:     %class_vitrequest%
+        arguments: ["@request_stack"]
+
+    vitmail:
+            class:     %class_vitmail%
+            arguments: ["@mailer"]

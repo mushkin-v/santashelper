@@ -13,18 +13,16 @@ class ResultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $points = 0;
+        $questions = $this->getQuestions();
+        $points = $this->get('vitrequest')->points($questions);
 
-        if ($request->isMethod('POST')) {
+        $congratulations = $this->getDoctrine()->getManager()
+            ->getRepository('AppBundle:Child')->findAll('congratulation');
 
-            // ->setDescription($request->request->get('description'))
-            foreach ($this->getQuestions() as $question) {
-                if ($request->request->get($question->getId())) {
-                    $points=$points+$request->request->get($question->getId());
-                }
-            }
-        }
-        return $this->render('Default/result.html.twig', array('points' => $points));
+        return $this->render('Default/result.html.twig', array(
+            'points' => $points,
+            'congratulation'=>$congratulations[rand(1,count($congratulations))],
+        ));
     }
 
     public function getQuestions()
