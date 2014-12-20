@@ -26,7 +26,7 @@ class DefaultController extends Controller
             $em->persist($child);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('test'));
+            return $this->redirect($this->generateUrl('test',array('slug'=>$child->getId())), 301);
         }
 
 

@@ -15,8 +15,6 @@ class ChildType extends AbstractType
         $builder->add('parent', 'text');
         $builder->add('email', 'email');
         $builder->add('letter', 'textarea');
-
-        $builder->add('Submit', 'submit');
     }
 
     public function getName()

@@ -1,11 +1,11 @@
 <?php
-namespace Mushkin\VitformsBundle\Form\Type;
+namespace  AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class SkillType extends AbstractType
+class TestType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -25,15 +25,15 @@ class SkillType extends AbstractType
         ;
     }
 
-        public function getName()
+    public function getName()
     {
-        return 'skill';
+        return 'test';
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Mushkin\VitformsBundle\Entity\Skill',
+            'data_class' => 'AppBundle\Entity\Test',
             'csrf_protection' => false,
         ));
     }

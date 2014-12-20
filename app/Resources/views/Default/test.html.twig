@@ -18,10 +18,30 @@
         <div class="'row">
             <div class="col-md-12">
 
-            <h1> SantasHelper </h1>
+            <h1> SantasHelper test for {{ child.name}} {{ child.surname }}! </h1><br>
 
+                <form role="form" method="post" action="{{ path ('result') }}">
+                <ol>
+                    {% for question in questions %}
+                        <li>
+                            <h4>{{ question.question }}</h4>
+                            <ol>
+                                {% for answer in question.answers %}
+                                    <li>
+
+                                        <label><input type="radio" name="{{ question.id  }}" value="{{ answer.points }}"/>{{ answer.answer }}</label>
+
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        </li><br>
+                    {% endfor %}
+                </ol>
+
+                <button type="submit" class="btn btn-lg btn-primary col-md-offset-1">Answer!</button>
+                <form>
             </div>
         </div>
     </div>
-
+    <br>
 {% endblock %}
