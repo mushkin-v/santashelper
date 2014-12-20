@@ -13,7 +13,7 @@ class ChildType extends AbstractType
         $builder->add('surname', 'text');
         $builder->add('age', 'integer');
         $builder->add('parent', 'text');
-        $builder->add('email', 'text');
+        $builder->add('email', 'email');
         $builder->add('letter', 'textarea');
         $builder->add('congratulation', 'textarea');
 

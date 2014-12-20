@@ -45,8 +45,8 @@ class Child
      * @Assert\Range(
      *      min = 3,
      *      max = 14,
-     *      minMessage = "Your too young. You are {{ limit }} years old. Sorry!",
-     *      maxMessage = "Your too old. You are {{ limit }} years old. Sorry!"
+     *      minMessage = "Your too young. You must be at least {{ limit }} years old. Sorry!",
+     *      maxMessage = "Your too old. You can be maximum {{ limit }} years old. Sorry!"
      * )
      */
     private $age;
