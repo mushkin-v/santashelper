@@ -6,7 +6,7 @@ use AppBundle\Entity\Child;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
-class LoadData implements FixtureInterface
+class LoadChild implements FixtureInterface
 {
     /**
      * {@inheritDoc}

@@ -26,7 +26,7 @@ class Answers
     /**
      * @var string
      *
-     * @ORM\Column(name="Answer", type="string", length=255)
+     * @ORM\Column(name="answer", type="string", length=255)
      */
     private $answer;
 
@@ -65,26 +65,26 @@ class Answers
     }
 
     /**
-     * Set Answer
+     * Set answer
      *
      * @param string $answer
      * @return Answers
      */
     public function setAnswer($answer)
     {
-        $this->Answer = $answer;
+        $this->answer = $answer;
 
         return $this;
     }
 
     /**
-     * Get Answer
+     * Get answer
      *
      * @return string 
      */
     public function getAnswer()
     {
-        return $this->Answer;
+        return $this->answer;
     }
 
     /**

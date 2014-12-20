@@ -2,7 +2,8 @@
 
 namespace AppBundle\DataFixtures\ORM;
 
-use AppBundle\Entity\Child;
+use AppBundle\Entity\Answers;
+use AppBundle\Entity\Questions;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
@@ -13,44 +14,37 @@ class LoadData implements FixtureInterface
      */
     public function load(ObjectManager $manager)
     {
-        $child = new Child();
-        $child
-            ->setName('Donald')
-            ->setSurname('Duck')
-            ->setAge(4)
-            ->setParent('Walt Disney')
-            ->setEmail('myroslavazel@gmail.com')
-            ->setCongratulation('We wish you a happy New Year!!!')
-            ->setLetter('Dear, Santa! I want a dog!')
-            ->setTestresult(10)
-        ;
-        $manager->persist($child);
+        //Question #1
+        $questions = new Questions();
+        $questions
+            ->setQuestion('Are your nut?');
 
-        $child = new Child();
-        $child
-            ->setName('Myroslava')
-            ->setSurname('Zelenska')
-            ->setAge(7)
-            ->setParent('Mother')
-            ->setEmail('myroslavazel@google.net')
-            ->setCongratulation('We wish you Marry Christmas!!!')
-            ->setLetter('Dear, Santa! I want a big barby!')
-            ->setTestresult(27)
+        $answer = new Answers();
+        $answer
+            ->setAnswer('Yes')
+            ->setPoints(10)
+            ->setQuestion($questions)
         ;
-        $manager->persist($child);
+        $manager->persist($answer);
 
-        $child = new Child();
-        $child
-            ->setName('Vitalii')
-            ->setSurname('Mushkin')
-            ->setAge(13)
-            ->setParent('Father')
-            ->setEmail('vitbox5@yandex.ru')
-            ->setCongratulation('We wish you a happy New Year and Marry Christmas!!!')
-            ->setLetter('Dear, Santa! I want a BMV X6!')
-            ->setTestresult(23)
+        $answer = new Answers();
+        $answer
+            ->setAnswer('No')
+            ->setPoints(20)
+            ->setQuestion($questions)
         ;
-        $manager->persist($child);
+        $manager->persist($answer);
+
+        $answer = new Answers();
+        $answer
+            ->setAnswer('what?')
+            ->setPoints(30)
+            ->setQuestion($questions)
+        ;
+        $manager->persist($answer);
+
+        $manager->persist($questions);
+
 
         $manager->flush();
     }
