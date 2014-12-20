@@ -148,8 +148,6 @@ task('cleanup', function () {
 task('deploy:start', function () {
 });
 task('deploy:end', function () {
-});
-task('deploy:end', function () {
     run('chmod 777 -R current/app/cache current/app/logs');
     run('php bin/reload.php');
 });
