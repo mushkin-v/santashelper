@@ -1,12 +1,11 @@
 # This file is a "template" of what your parameters.yml file should look like
 parameters:
     database_driver:   pdo_mysql
-    database_host:     178.62.130.39
+    database_host:     127.0.0.1
     database_port:     ~
     database_name:     santashelper
     database_user:     root
-    database_password: 3&?)q[(d'V_Sjc?+ND7*uFx@[>\:^sZxvD[d*WKDCy-]r:'(R')67{@:'"x`"cp/&'L]`%N+:YPB93w;qV]!#7J)LYye'@Y4C;TE&"5h5^NVx6"{;*t@%)9/G@>}VMMR%Ea,Ggnf}"caTpT9*fn>GyaTF\{]^8~6>Tn5!_m}).Kc-^Dg*quEA:u8z;b{C:w{23&cx8C<=+3ZR=SJB{,+~rgDU}Xpn?@c4K/;`CjB=9?_j^!H;t39E+f\mT29%5R;B#5YZ%3\E678q_nsTL!t/X@Jj5'Lpm&qat\H-.x*3Y;Q~!:R\yj[)j7M622~\;_e;`5a:@U4E<H>~23jmg#+Kx(yR+>{'%g>G~)g]KN;fR`#Wz.YzCja)2ArTUm+{@fy[<7&`CdS8c5L`vs)RXzry&!u-bM^jKDm[/\tn@A#`>QX(N`+`&v`wdV/hJrw'/#:xd)Z[BA_;L9%e%JJ+z#}e:cDnMgCD]h=5<gRR$VZU2GgGu}eL<m4s<z&uAX]:5*+
-
+    database_password: ~
 
     # You should uncomment this if you want use pdo_sqlite
     # database_path: "%kernel.root_dir%/data.db3"
