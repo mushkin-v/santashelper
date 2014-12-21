@@ -1,0 +1,51 @@
+{% extends ":Default:layout.html.twig" %}
+
+{% block body %}
+
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Have you been a good child this year?</a>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="'row">
+            <div class="col-md-12">
+
+                <h1 class="bg-danger"> Your points: {{ points }}! <small>Your letter was successfully send to Santa! </small></h1>
+
+                {% if points < 15 %}
+                    <h3>
+                        Congratulations! You are a very good child! You'll definitely get what you want! To tell the truth, Santa's helper didn't believe you'd ever existed. Or... just another little liar?
+                    </h3>
+                {% elseif points < 20 %}
+                    <h3>
+                        You're a good child! You behave yourself and Santa is glad to present you a desired gift!
+                    </h3>
+                {% elseif points < 25 %}
+                    <h3>
+                        You're a little fidget! Santa is not really sure whether you deserve the desired present... The only way to solve the situation is to tell your parents you love them. I bet they don't realize it completely...
+                    </h3>
+                {% else %}
+                    <h3>
+                        Oh... You have to work very hard to make Santa satisfied. Santa's helper says you misbehave. Improve your attitude to the world around and you'll get the desired!
+                    </h3>
+                {% endif %}
+                <br>
+                <br>
+                <h2 class="bg-info">This is random congratulation from another child for you:</h2>
+                <h3>{{ congratulation }}</h3>
+
+                <img src="{{ asset('images/santa2.gif') }}" class="col-md-2 col-md-offset-2">
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

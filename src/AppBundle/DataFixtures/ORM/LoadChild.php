@@ -33,8 +33,8 @@ class LoadChild implements FixtureInterface
             ->setAge(7)
             ->setParent('Mother')
             ->setEmail('myroslavazel@google.net')
-            ->setCongratulation('We wish you Marry Christmas!!!')
-            ->setLetter('Dear, Santa! I want a big barby!')
+            ->setCongratulation('We wish you Merry Christmas!!!')
+            ->setLetter('Dear, Santa! I want a big barbie!')
             ->setTestresult(17)
         ;
         $manager->persist($child);
@@ -46,7 +46,7 @@ class LoadChild implements FixtureInterface
             ->setAge(13)
             ->setParent('Father')
             ->setEmail('vitbox5@yandex.ru')
-            ->setCongratulation('We wish you a happy New Year and Marry Christmas!!!')
+            ->setCongratulation('We wish you a happy New Year and Merry Christmas!!!')
             ->setLetter('Dear, Santa! I want a BMV X6!')
             ->setTestresult(23)
         ;
