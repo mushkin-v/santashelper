@@ -1,0 +1,47 @@
+{% extends ":Default:layout.html.twig" %}
+
+{% block body %}
+
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">SantasHelper test for {{ child.name}} {{ child.surname }}!</a>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="'row">
+            <div class="col-md-12">
+
+            <h1 class="bg-danger">Have you been a good child this year?</h1><br>
+
+                <form role="form" method="post" action="{{ path ('result') }}">
+                <ol>
+                    {% for question in questions %}
+                        <li>
+                            <h4 class="bg-info">>{{ question.question }}</h4>
+                            <ol>
+                                {% for answer in question.answers %}
+                                    <li>
+
+                                        <label><input type="radio" name="{{ question.id  }}" value="{{ answer.points }}"/>{{ answer.answer }}</label>
+
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        </li><br>
+                    {% endfor %}
+                </ol>
+
+                <button type="submit" class="btn btn-lg btn-primary col-md-offset-1">Answer!</button>
+                <form>
+            </div>
+        </div>
+    </div>
+    <br>
+{% endblock %}

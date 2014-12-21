@@ -45,8 +45,8 @@ class Child
      * @Assert\Range(
      *      min = 3,
      *      max = 14,
-     *      minMessage = "Your too young. You are {{ limit }} years old. Sorry!",
-     *      maxMessage = "Your too old. You are {{ limit }} years old. Sorry!"
+     *      minMessage = "Your too young. You must be at least {{ limit }} years old. Sorry!",
+     *      maxMessage = "Your too old. You can be maximum {{ limit }} years old. Sorry!"
      * )
      */
     private $age;
@@ -69,21 +69,21 @@ class Child
     /**
      * @var string
      *
-     * @ORM\Column(name="letter", type="string", length=255)
+     * @ORM\Column(name="letter", type="text")
      */
     private $letter;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="testresult", type="string", length=255)
+     * @ORM\Column(name="testresult", type="string", length=255, nullable=true)
      */
     private $testresult;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="congratulation", type="string", length=255)
+     * @ORM\Column(name="congratulation", type="text", nullable=true)
      */
     private $congratulation;
 
