@@ -16,12 +16,14 @@ class ResultController extends Controller
         $questions = $this->getQuestions();
         $points = $this->get('vitrequest')->points($questions);
 
-        $congratulations = $this->getDoctrine()->getManager()
-            ->getRepository('AppBundle:Child')->findAll('congratulation');
+        $child = $this->getDoctrine()->getManager()
+            ->getRepository('AppBundle:Child')->findAll();
+        $congratulation = $this->getDoctrine()->getManager()
+            ->getRepository('AppBundle:Child')->findOneById(rand(1,count($child)));
 
         return $this->render('Default/result.html.twig', array(
             'points' => $points,
-            'congratulation'=>$congratulations[rand(1,count($congratulations))],
+            'congratulation'=>$congratulation->getCongratulation(),
         ));
     }
 

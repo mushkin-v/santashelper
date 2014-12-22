@@ -1,3 +1,3 @@
 [![Build Status](https://travis-ci.org/mushkin-v/santashelper.svg?branch=develop)](https://travis-ci.org/mushkin-v/santashelper)
-
-SantasHelper
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mushkin-v/santashelper/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mushkin-v/santashelper/?branch=master)
+Ho! Ho! Ho! Write a letter to Santa Claus? Yes, kids, now it’s as easy as pie! Just let Santa’s helper know what you would like for Christmas, than let him find out whether you’ve been nice and obedient this year... From the North Pole, Santa will send you reply faster than you can imagine! And a nice surprise at the finish line! Santa's waiting for you!

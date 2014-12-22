@@ -1,9 +1,4 @@
 <?php
-/* (c) Anton Medvedev <anton@elfet.ru>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 /**
  * Rollback to previous release.
  */
@@ -148,4 +143,6 @@ task('cleanup', function () {
 task('deploy:start', function () {
 });
 task('deploy:end', function () {
+    run('php bin/reload.php');
+    run('chmod 777 -R current/app/cache current/app/logs');
 });

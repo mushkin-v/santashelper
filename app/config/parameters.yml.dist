@@ -3,9 +3,10 @@ parameters:
     database_driver:   pdo_mysql
     database_host:     127.0.0.1
     database_port:     ~
-    database_name:     symfony
+    database_name:     santashelper
     database_user:     root
     database_password: ~
+
     # You should uncomment this if you want use pdo_sqlite
     # database_path: "%kernel.root_dir%/data.db3"
 
@@ -22,4 +23,4 @@ parameters:
     domain: santashelper.hackathon.pp.ua
     prod_server_ip: 178.62.130.39
     prod_server_pass: KEA2FFWPEqTeCrDyjXBMrCjQEUMJrMDEjE9rzA2BVMLAqUEZrbB3E7Rx2zXeDSdUa4vkzHX5DVw96Gc4ZyPJK7PAsqKDvPpwcrc3pDzGznGTcSF5B6mSJQP5QAyYmzCFyYEEcx4vdgtMNtejLWQyQ8DLNcA495rtmKTYx8cnb9mpS6u8PuZkw42yepsraXfbuYU3wnaTzdVsL9vGXQhJfXJ87cBYVzxQjUS4xU6mXw84v5T4mXr57dbZjP9NRVtpGmfHmTMVztgRNeTvahFVu6CRkHEVwzYFf6bdJ2dGsuWTgH284JqxSRNvYv92kP4ydfg7ZR4sQURHSGgPNRNPa7jwFVKzEzYYJUcENtTcwV9bkRUMehTGubBpRGaLUFHz7RtbxR4LE6S8UzLASUbDf9bYJ59eJSvAMcCR5BMqsEatQ2xBuMgmvJTnvJKVJsdGsryat2Bs7hSKmPC66YNb3N8M4cHWRkRjPfX89YTRK8Jqbwf36z3u5WCFerR5xa6c
-    https_github_repository_url: https://github.com/mushkin-v/santashelper
+    https_github_repository_url: https://github.com/mushkin-v/santashelper.git
