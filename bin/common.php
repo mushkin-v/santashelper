@@ -108,7 +108,7 @@ task('deploy:writeable_dirs', function () {
 task('deploy:vendors', function () {
     $releasePath = env()->getReleasePath();
     cd($releasePath);
-    $prod = get('env', 'prod');
+    $prod = get('env', 'dev');
     $isComposer = run("if [ -e $releasePath/composer.phar ]; then echo 'true'; fi");
     if ('true' !== $isComposer) {
         run("curl -s http://getcomposer.org/installer | php");
