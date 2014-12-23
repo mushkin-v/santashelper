@@ -113,7 +113,7 @@ task('deploy:vendors', function () {
     if ('true' !== $isComposer) {
         run("curl -s http://getcomposer.org/installer | php");
     }
-    run("SYMFONY_ENV=$prod php composer.phar install --no-dev --verbose --prefer-dist --optimize-autoloader --no-progress");
+    run("SYMFONY_ENV=$prod php composer.phar install --verbose --prefer-dist --optimize-autoloader --no-progress");
 })->desc('Installing vendors');
 /**
  * Create symlink to last release
