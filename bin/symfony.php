@@ -88,7 +88,7 @@ task('database:migrate', function () {
  */
 task('deploy:clear_controllers', function () {
     $releasePath = env()->getReleasePath();
-    run("rm -f $releasePath/web/app_*.php");
+//    run("rm -f $releasePath/web/app_*.php");
 });
 after('deploy:update_code', 'deploy:clear_controllers');
 // Symfony shared dirs
