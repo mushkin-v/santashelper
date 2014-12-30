@@ -1,0 +1,18 @@
+navbar:
+    navbar_brand: "Write your own letter to Santa!"
+
+lang:
+    english: "English"
+    russian: "Russian"
+    ukrainian: "Ukrainian"
+    german: "German"
+
+child:
+    child_name: "Enter your name:"
+    child_surname: "Enter your surname:"
+    child_age: "Enter your age:"
+    child_parent: "Enter your beloved relative name:"
+    child_email: "Enter his/her email:"
+    child_letter: "Here you can write your letter to Santa:"
+    child_congratulation: "Here you can write your congratulations with New Year to other children:"
+    submit_form_button: "Send"

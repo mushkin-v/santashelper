@@ -1,0 +1,18 @@
+navbar:
+    navbar_brand: "Напиши листа Діду Морозу!"
+
+lang:
+    english: "Англійська"
+    russian: "Російська"
+    ukrainian: "Українська"
+    german: "Німецька"
+
+child:
+    child_name: "Напиши своє ім’я:"
+    child_surname: "Напиши своє прізвище:"
+    child_age: "Скільки тобі років:"
+    child_parent: "Напиши свого найулюбленішого родича:"
+    child_email: "Напиши його/її e-mail:"
+    child_letter: "Тут ти можеш залишити свого листа Діду Морозу:"
+    child_congratulation: "А тут ти можеш надіслати привітання з Новим Роком іншим дітям:"
+    submit_form_button: "Надіслати"
