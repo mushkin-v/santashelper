@@ -1,7 +1,17 @@
-app:
-    resource: @AppBundle/Controller/
-    type:     annotation
+#app:
+#    resource: @AppBundle/Controller/
+#    type:     annotation
 #    prefix:   /{_locale}/
-    defaults: {_locale: en}
-    requirements:
-         _locale: en|ru|ua|de
+#    defaults: {_locale: en}
+#    requirements:
+#         _locale: en|ru|ua|de
+
+app_homepage:
+     path: /{_locale}
+     methods: [GET, POST]
+     defaults: { _controller: AppBundle:Default:index, _locale: en}
+
+app:
+     resource: @AppBundle/Controller/
+     prefix:   /{_locale}/
+     defaults: { _locale: en }

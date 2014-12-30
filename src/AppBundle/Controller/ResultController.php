@@ -14,8 +14,6 @@ class ResultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $locale = $request->getLocale();
-        $request->setLocale('en');
 
         $questions = $this->getQuestions();
         $points = $this->get('vitrequest')->points($questions);
