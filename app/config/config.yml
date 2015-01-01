@@ -5,7 +5,7 @@ imports:
 
 framework:
     #esi:             ~
-    #translator:      { fallback: "%locale%" }
+    translator:      { fallback: "%locale%" }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -15,8 +15,8 @@ framework:
     validation:      { enable_annotations: true }
     templating:
         engines: ['twig']
-        #assets_version: SomeVersionScheme
-    default_locale:  "%locale%"
+        assets_version: SomeVersionScheme
+    default_locale:  %locale%
     trusted_hosts:   ~
     trusted_proxies: ~
     session:
@@ -67,7 +67,7 @@ doctrine:
         auto_mapping: true
 
 stof_doctrine_extensions:
-    default_locale: en_US
+    default_locale: en
     orm:
         default:
             timestampable: true

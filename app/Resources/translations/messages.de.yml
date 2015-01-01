@@ -1,0 +1,18 @@
+navbar:
+    navbar_brand: "Schreiben Sie Ihren eigenen Brief an Weihnachtsmann!"
+
+lang:
+    english: "English"
+    russian: "Russisch"
+    ukrainian: "Ukrainisch"
+    german: "Deutsch"
+
+child:
+    child_name: "Schreiben Sie Ihren Namen:"
+    child_surname: "Schreiben Sie Ihren Nachnamen:"
+    child_age: "Nennen Sie Ihre Alter:"
+    child_parent: "Schreiben Sie Ihren geliebten relativen Namen:"
+    child_email: "Schreiben Sie seine E-Mail:"
+    child_letter: "Hier können Sie Ihren Brief an Santa schreiben:"
+    child_congratulation: "Hier können Sie Ihre Glückwünsche mit neuen Jahres zu anderen Kindern zu schreiben:"
+    submit_form_button: "Senden"

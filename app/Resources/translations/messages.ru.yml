@@ -1,0 +1,18 @@
+navbar:
+    navbar_brand: "Напиши письмо Дедушке Морозу!"
+
+lang:
+    english: "Английский"
+    russian: "Русский"
+    ukrainian: "Украинский"
+    german: "Немецкий"
+
+child:
+    child_name: "Напиши свое имя:"
+    child_surname: "Напиши свою фамилию:"
+    child_age: "Сколько тебе лет:"
+    child_parent: "Напиши своего самого любимого родственника:"
+    child_email: "Напиши его/ее e-mail:"
+    child_letter: "Здесь ты можешь оставить свое письмо Деду Морозу:"
+    child_congratulation: "А здесь ты можешь отправить поздравления с Новым Годом другим детям:"
+    submit_form_button: "Отправить"

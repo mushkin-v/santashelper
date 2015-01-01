@@ -16,6 +16,8 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        $locale = $request->getLocale();
+
         $em = $this->getDoctrine()->getManager();
         $child = new Child();
         $form = $this->createForm(new ChildType(), $child);
